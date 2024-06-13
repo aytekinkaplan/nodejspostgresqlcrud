@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kullanıcı Listesi</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Kullanıcı Listesi</h1>
+    <a href="/add">Yeni Kullanıcı Ekle</a>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Ad</th>
+          <th>Email</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+        <tr>
+          <td><%= user.id %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td>
+            <a href="/edit/<%= user.id %>">Düzenle</a>
+            <form
+              action="/delete/<%= user.id %>"
+              method="post"
+              style="display: inline"
+            >
+              <button type="submit">Sil</button>
+            </form>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
