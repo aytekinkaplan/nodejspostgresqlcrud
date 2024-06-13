@@ -1,0 +1,12 @@
+{
+  "name": "nodejspostgresqlcrud",
+  "version": "1.0.0",
+  "description": "CRUD Process in PostgreSQL using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Aytekin Kaplan",
+  "license": "ISC"
+}
