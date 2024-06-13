@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kullanıcı Düzenle</title>
+  </head>
+  <body>
+    <h1>Kullanıcı Düzenle</h1>
+    <form action="/edit/<%= user.id %>" method="post">
+      <label for="name">Ad:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="<%= user.name %>"
+        required
+      />
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="<%= user.email %>"
+        required
+      />
+      <button type="submit">Güncelle</button>
+    </form>
+    <a href="/">Geri Dön</a>
+  </body>
+</html>
